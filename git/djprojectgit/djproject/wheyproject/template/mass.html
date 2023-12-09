@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>INFOSYS REGISTRATION</h1>
+<form action="creatine" method="POST">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="enter your user name"><br>
+      <input type="text" name="first_name" placeholder="enter your first name"><br>
+      <input type="email" name="email" placeholder="enter your email"><br>
+      <input type="password" name="password" placeholder="enter your password"><br>
+      <input type="password" name="cpassword" placeholder="enter conform password"><br>
+      <input type="submit"><br>
+    {% for msg in messages %}
+      {{msg}}
+    {% endfor %}
+
+</form>
+</body>
+</html>
